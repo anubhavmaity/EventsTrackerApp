@@ -15,14 +15,25 @@ class TrackingListViewController: UIViewController{
     var myNewDictArray: [String] = []
     var username: String = ""
     var userSession = NSUserDefaults.standardUserDefaults()
+    let allEvents = Event.allEvents
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        //var b = UIBarButtonItem(title: "Edit", style: .Plain, target: TrackingListViewController(), action: Selector("edit:"))
+        //self.navigationItem.rightBarButtonItem = b
         self.tabBarController?.tabBar.hidden = false
+        
         var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
         rightSwipe.direction = .Right
         view.addGestureRecognizer(rightSwipe)
         
+        
+    }
+    func edit(sender: UIBarButtonItem) {
+        // Perform your custom actions
+        // ...
+        // Go back to the previous ViewController
+        self.setEditing(true, animated:true)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,7 +50,7 @@ class TrackingListViewController: UIViewController{
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        tableView.setEditing(true, animated:false)
+        tableView.setEditing(true, animated: true)
         
         let cell = tableView.dequeueReusableCellWithIdentifier("TrackCell") as UITableViewCell
         if let userName: AnyObject  = userSession.objectForKey("userSession"){
@@ -69,6 +80,14 @@ class TrackingListViewController: UIViewController{
             userDefaults.setObject(myNewDictArray, forKey:username)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //tableView.setEditing(false, animated:false)
+        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("EventDetailViewController") as EventDetailViewController
+        detailController.event = self.allEvents[indexPath.row]
+        self.navigationController!.pushViewController(detailController, animated: true)
+        
     }
     
     func tableView(tableView: UITableView!, canMoveRowAtIndexPath indexPath: NSIndexPath!) -> Bool{
