@@ -22,7 +22,7 @@ struct Event {
     static let FeesKey = "FeesKey"
     static let ImageKey = "ImageKey"
     
-    // Generate a Villain from a three entry dictionary
+   
 
     init(dictionary: [String : String]) {
     
@@ -34,13 +34,10 @@ struct Event {
 }
 
 
-/**
-* This extension adds static variable allVillains. An array of Villain objects
-*/
 
 extension Event {
 
-    // Generate an array full of all of the villains in
+    
     static var allEvents: [Event] {
         
         var eventArray = [Event]()

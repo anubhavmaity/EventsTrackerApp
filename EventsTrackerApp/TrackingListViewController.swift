@@ -1,6 +1,6 @@
 //
 //  TrackingListViewController.swift
-//  BondVillains
+//  EventsTrackerApp
 //
 //  Created by Anubhav Maity on 12/04/15.
 //  Copyright (c) 2015 Udacity. All rights reserved.
@@ -29,12 +29,7 @@ class TrackingListViewController: UIViewController{
         
         
     }
-    func edit(sender: UIBarButtonItem) {
-        // Perform your custom actions
-        // ...
-        // Go back to the previous ViewController
-        self.setEditing(true, animated:true)
-    }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let userName: AnyObject  = userSession.objectForKey("userSession"){
@@ -61,10 +56,7 @@ class TrackingListViewController: UIViewController{
             myNewDictArray = userDefaults.objectForKey(username) as Array
             cell.textLabel?.text = myNewDictArray[indexPath.row]
         }
-        // Set the name and image
-        //cell.textLabel?.text = villain.name
-        //cell.imageView?.image = UIImage(named: villain.imageName)
-        
+     
         
         return cell
     }

@@ -1,6 +1,6 @@
 //
 //  VillainDetailViewController.swift
-//  BondVillains
+//  EventsTrackerApp
 //
 //  Created by Anubhav Maity
 //  Copyright (c) 2015 Anubhav Maity. All rights reserved.//
@@ -28,8 +28,7 @@ class EventDetailViewController : UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.label.text = self.event.name
-        
-        //self.imageView!.image = UIImage(named: villain.imageName)
+       
         self.place.text = self.event.place
         self.fees.text = self.event.fees
         self.imageView?.image = UIImage(named:self.event.image)
@@ -41,7 +40,7 @@ class EventDetailViewController : UIViewController {
             username = userSession.objectForKey("userSession") as String
             print(username)
         }
-        //print(fetchAllActors())
+        
         if let data: AnyObject = userDefaults.objectForKey(username){
             myNewDictArray = userDefaults.objectForKey(username) as Array
             if contains(myNewDictArray, self.label.text!){

@@ -10,8 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
     
-    // Get ahold of some villains, for the table
-    // This is an array of Villain instances
+    
     let allEvents = Event.allEvents
     
     // MARK: Table View Data Source
@@ -36,13 +35,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("EventCell") as CustomCellTableViewCell
         let event = self.allEvents[indexPath.row]
         
-        // Set the name and image
-        //cell.textLabel?.text = villain.name
-        //cell.imageView?.image = UIImage(named: villain.imageName)
         cell.Event.text = event.name
         cell.Image?.image = UIImage(named:event.image)
         
-        // If the cell has a detail label, we will put the evil scheme in.
+      
         if let placeTextLabel = cell.Place {
             placeTextLabel.text = "Place: \(event.place)"
         }

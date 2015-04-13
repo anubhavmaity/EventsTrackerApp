@@ -11,12 +11,10 @@ import UIKit
 
 class EventCollectionViewController: UIViewController, UICollectionViewDataSource {
     
-    // Get ahold of some villains, for the table
-    // This is an array of Villain instances
+   
     let allEvents = Event.allEvents
     
     
-    // MARK: Table View Data Source
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,9 +37,7 @@ class EventCollectionViewController: UIViewController, UICollectionViewDataSourc
         // Set the name and image
         cell.Event.text = event.name
         cell.EventImage?.image = UIImage(named: event.image)
-//        cell.villainImageView?.image = UIImage(named: villain.imageName)
-//        cell.schemeLabel.text = "Scheme: \(villain.evilScheme)"
-//        
+ 
         return cell
     }
     
