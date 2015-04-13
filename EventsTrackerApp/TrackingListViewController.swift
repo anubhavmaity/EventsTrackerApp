@@ -16,6 +16,15 @@ class TrackingListViewController: UIViewController{
     var username: String = ""
     var userSession = NSUserDefaults.standardUserDefaults()
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.hidden = false
+        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        rightSwipe.direction = .Right
+        view.addGestureRecognizer(rightSwipe)
+        
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let userName: AnyObject  = userSession.objectForKey("userSession"){
             username = userSession.objectForKey("userSession") as String
@@ -71,5 +80,13 @@ class TrackingListViewController: UIViewController{
         let item : String = myNewDictArray[sourceIndexPath.row];
         myNewDictArray.removeAtIndex(sourceIndexPath.row);
         myNewDictArray.insert(item, atIndex: destinationIndexPath.row)
+    }
+    
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Right) {
+            println("Swipe Right")
+           self.navigationController!.popViewControllerAnimated(true)
+            
+        }
     }
 }
