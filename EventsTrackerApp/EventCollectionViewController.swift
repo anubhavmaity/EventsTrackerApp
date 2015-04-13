@@ -1,6 +1,6 @@
 //
-//  VillainCollectionViewController.swift
-//  BondVillains
+// 
+//  EventsTrackerApp
 //
 //  Created by Anubhav Maity
 //  Copyright (c) 2015 Anubhav Maity. All rights reserved.//

@@ -1,6 +1,6 @@
 //
 //  LoginController.swift
-//  BondVillains
+//  EventsTrackerApp
 //
 //  Created by Anubhav Maity on 12/04/15.
 //  Copyright (c) 2015 Udacity. All rights reserved.
