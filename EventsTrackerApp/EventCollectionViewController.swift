@@ -2,9 +2,8 @@
 //  VillainCollectionViewController.swift
 //  BondVillains
 //
-//  Created by Gabrielle Miller-Messner on 2/3/15.
-//  Copyright (c) 2015 Udacity. All rights reserved.
-//
+//  Created by Anubhav Maity
+//  Copyright (c) 2015 Anubhav Maity. All rights reserved.//
 
 import Foundation
 

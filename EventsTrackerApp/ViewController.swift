@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  BondVillains
+//  EventsTrackerApp
 //
-//  Created by Jason on 11/19/14.
-//  Copyright (c) 2014 Udacity. All rights reserved.
+//  Created by Anubhav
+//  Copyright (c) 2015 Anubhav Maity. All rights reserved.
 //
 
 import UIKit

@@ -30,6 +30,8 @@ class TrackingListViewController: UIViewController{
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        tableView.setEditing(true, animated:false)
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("TrackCell") as UITableViewCell
         if let userName: AnyObject  = userSession.objectForKey("userSession"){
             username = userSession.objectForKey("userSession") as String

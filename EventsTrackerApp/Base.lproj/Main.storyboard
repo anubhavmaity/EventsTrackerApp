@@ -55,10 +55,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="153" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wt8-P7-QvC">
-                                                    <rect key="frame" x="34" y="8" width="85" height="69"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OAq-1n-CpW">
+                                                    <rect key="frame" x="36" y="8" width="80" height="66"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vb-V7-tq3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPC-Yg-QaG">
                                                     <rect key="frame" x="8" y="102" width="137" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -67,21 +67,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="centerY" secondItem="wt8-P7-QvC" secondAttribute="centerY" constant="23" id="4Qa-dB-xiy"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="wt8-P7-QvC" secondAttribute="trailing" constant="26" id="9l9-2Q-xNU"/>
-                                            <constraint firstItem="5vb-V7-tq3" firstAttribute="top" secondItem="wt8-P7-QvC" secondAttribute="bottom" constant="25" id="A7E-YJ-ncC"/>
-                                            <constraint firstItem="5vb-V7-tq3" firstAttribute="bottom" secondItem="hRR-2e-LRh" secondAttribute="bottomMargin" id="AVp-lb-QWs"/>
-                                            <constraint firstItem="5vb-V7-tq3" firstAttribute="top" secondItem="hRR-2e-LRh" secondAttribute="topMargin" constant="94" id="DLE-fz-vMY"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="wt8-P7-QvC" secondAttribute="bottom" constant="46" id="Jwi-Jj-Y8R"/>
-                                            <constraint firstItem="wt8-P7-QvC" firstAttribute="leading" secondItem="hRR-2e-LRh" secondAttribute="leadingMargin" constant="26" id="ddt-n8-Fxv"/>
-                                            <constraint firstItem="5vb-V7-tq3" firstAttribute="leading" secondItem="hRR-2e-LRh" secondAttribute="leadingMargin" id="eWV-Tw-Rv6"/>
-                                            <constraint firstItem="5vb-V7-tq3" firstAttribute="trailing" secondItem="hRR-2e-LRh" secondAttribute="trailingMargin" id="fwg-lp-lGF"/>
-                                            <constraint firstAttribute="centerX" secondItem="wt8-P7-QvC" secondAttribute="centerX" id="pNz-8c-upi"/>
-                                        </constraints>
                                         <connections>
-                                            <outlet property="Event" destination="5vb-V7-tq3" id="bop-AT-u3h"/>
-                                            <outlet property="EventImage" destination="wt8-P7-QvC" id="49c-z5-t03"/>
+                                            <outlet property="Event" destination="CPC-Yg-QaG" id="qd0-Tt-0Oz"/>
+                                            <outlet property="EventImage" destination="OAq-1n-CpW" id="jaA-m7-mHv"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

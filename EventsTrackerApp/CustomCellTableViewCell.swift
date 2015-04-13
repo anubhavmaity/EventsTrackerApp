@@ -2,8 +2,8 @@
 //  CustomCellTableViewCell.swift
 //  BondVillains
 //
-//  Created by Anubhav Maity on 11/04/15.
-//  Copyright (c) 2015 Udacity. All rights reserved.
+//  Created by Anubhav Maity 
+//  Copyright (c) 2015 Anubhav Maity. All rights reserved.
 //
 
 import UIKit
