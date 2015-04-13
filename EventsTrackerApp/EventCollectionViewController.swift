@@ -1,0 +1,65 @@
+//
+//  VillainCollectionViewController.swift
+//  BondVillains
+//
+//  Created by Gabrielle Miller-Messner on 2/3/15.
+//  Copyright (c) 2015 Udacity. All rights reserved.
+//
+
+import Foundation
+
+import UIKit
+
+class EventCollectionViewController: UIViewController, UICollectionViewDataSource {
+    
+    // Get ahold of some villains, for the table
+    // This is an array of Villain instances
+    let allEvents = Event.allEvents
+    
+    
+    // MARK: Table View Data Source
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.hidden = false
+        var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        leftSwipe.direction = .Left
+        view.addGestureRecognizer(leftSwipe)
+        
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.allEvents.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("EventCollectionViewCell", forIndexPath: indexPath) as EventCollectionViewCell
+        let villain = self.allEvents[indexPath.row]
+        
+        // Set the name and image
+        cell.Event.text = villain.name
+//        cell.villainImageView?.image = UIImage(named: villain.imageName)
+//        cell.schemeLabel.text = "Scheme: \(villain.evilScheme)"
+//        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
+    {
+        
+        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("EventDetailViewController") as EventDetailViewController
+        detailController.event = self.allEvents[indexPath.row]
+        self.navigationController!.pushViewController(detailController, animated: true)
+        
+    }
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Left) {
+            println("Swipe Left")
+            let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("TrackingListView") as TrackingListViewController
+            self.navigationController!.pushViewController(detailController, animated: true)
+            
+        }
+    }
+    
+}
