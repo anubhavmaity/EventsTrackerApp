@@ -35,10 +35,11 @@ class EventCollectionViewController: UIViewController, UICollectionViewDataSourc
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("EventCollectionViewCell", forIndexPath: indexPath) as EventCollectionViewCell
-        let villain = self.allEvents[indexPath.row]
+        let event = self.allEvents[indexPath.row]
         
         // Set the name and image
-        cell.Event.text = villain.name
+        cell.Event.text = event.name
+        cell.EventImage?.image = UIImage(named: event.image)
 //        cell.villainImageView?.image = UIImage(named: villain.imageName)
 //        cell.schemeLabel.text = "Scheme: \(villain.evilScheme)"
 //        

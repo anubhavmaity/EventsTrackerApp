@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BD9A3529-7EB9-4551-AD27-6BD07D637BF1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EventsTrackerApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>82095584199BF4347EF1DA6BF164B13D9BF67DCC</key>
+		<string>https://github.com/anubhavmaity/EventsTrackerApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EventsTrackerApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>82095584199BF4347EF1DA6BF164B13D9BF67DCC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/anubhavmaity/EventsTrackerApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>82095584199BF4347EF1DA6BF164B13D9BF67DCC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>82095584199BF4347EF1DA6BF164B13D9BF67DCC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>EventsTrackerApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

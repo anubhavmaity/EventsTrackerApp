@@ -33,13 +33,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("VillainCell") as CustomCellTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("EventCell") as CustomCellTableViewCell
         let event = self.allEvents[indexPath.row]
         
         // Set the name and image
         //cell.textLabel?.text = villain.name
         //cell.imageView?.image = UIImage(named: villain.imageName)
         cell.Event.text = event.name
+        cell.Image?.image = UIImage(named:event.image)
         
         // If the cell has a detail label, we will put the evil scheme in.
         if let placeTextLabel = cell.Place {

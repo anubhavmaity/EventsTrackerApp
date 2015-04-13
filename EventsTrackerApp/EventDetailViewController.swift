@@ -33,6 +33,7 @@ class EventDetailViewController : UIViewController {
         //self.imageView!.image = UIImage(named: villain.imageName)
         self.place.text = self.event.place
         self.fees.text = self.event.fees
+        self.imageView?.image = UIImage(named:self.event.image)
         var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
         leftSwipe.direction = .Left
         view.addGestureRecognizer(leftSwipe)
